@@ -1,3 +1,8 @@
+.Main {
+  flex: 1;
+  padding-right: 40px;
+}
+
 .Main-nav {
   display: flex;
   flex-wrap: wrap;
