@@ -2,7 +2,7 @@
 
 Este desafio foi feito com base em https://gist.github.com/giulianovarriale/269f948dbf18573190ae59410be849b4
 
-## Instalation
+## Instalação
 
 - Clone esse repositório
 - Rode `npm install`
