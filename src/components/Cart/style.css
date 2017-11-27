@@ -31,3 +31,17 @@
   color: #756B6B;
   font-size: 14px;
 }
+
+.Cart-info {
+  display: flex;
+  justify-content: space-between;
+}
+
+.Cart-name {
+  color: #756B6B;
+  font-size: 14px;
+}
+
+.Cart-value {
+  font-weight: 600;
+}
