@@ -37,4 +37,23 @@ describe('reducers', () => {
     expect(defaultState.cart).toContainEqual(itemToRemove);
     expect(newState.cart).not.toContainEqual(itemToRemove);
   });
+
+  it('should not add the same item twice', () => {
+    const newItem = {
+      id: 399,
+      name: 'New Test Game',
+      price: 199.99,
+      score: 150,
+      image: 'test-image.png',
+    };
+
+    const action = addItem(newItem);
+
+    let newState = reducer(defaultState, action);
+    newState = reducer(newState, action);
+
+    const unDuplicatedCart = newState.cart.filter(item => item.id === newItem.id);
+
+    expect(unDuplicatedCart.length).toBeLessThanOrEqual(1);
+  });
 });
