@@ -1,0 +1,25 @@
+.Main {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.Main-title {
+  margin: 0;
+  font-weight: 600;
+}
+
+.Main-select {
+  appearance: none;
+  background-color: #fff;
+  padding-left: 10px;
+  padding-right: 10px;
+  border: 1px solid #E1E1E1;
+  border-radius: 3px;
+  width: 260px;
+  height: 40px;
+  background-image: url('../../images/arrow-down.svg');
+  background-repeat: no-repeat;
+  background-position: 240px 17px;
+}
