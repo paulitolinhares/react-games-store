@@ -14,7 +14,7 @@ const gameStoreReducer = (state = defaultState, action) => {
     case 'REMOVE_ITEM':
       return {
         ...state,
-        cart: state.cart.filter(item => item.id !== action.item.id)
+        cart: state.cart.filter(item => item.id !== action.item.id),
       };
     case 'CLEAR_CART':
       return {

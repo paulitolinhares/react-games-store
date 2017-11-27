@@ -37,7 +37,7 @@ class Main extends Component {
         <div className="Main-cards">
           { this.state.cards.map(item => <GameCard {...item} />) }
         </div>
-    </main>
+      </main>
     );
   }
 }

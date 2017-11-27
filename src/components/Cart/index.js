@@ -7,7 +7,7 @@ import CartItem from '../CartItem';
 import cart from '../../images/cart.svg';
 import './style.css';
 
-const renderItemCounter = itemCount => itemCount === 1 ? '1 item' : `${itemCount} itens`;
+const renderItemCounter = itemCount => (itemCount === 1 ? '1 item' : `${itemCount} itens`);
 
 class Cart extends Component {
   constructor(props) {
@@ -26,7 +26,7 @@ class Cart extends Component {
   componentWillReceiveProps(nextProps) {
     const { cart } = nextProps;
     const pricingInfo = calcOrder(cart);
-    this.setState({...pricingInfo});
+    this.setState({ ...pricingInfo });
   }
 
   handleRemove(id) {

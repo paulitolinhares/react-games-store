@@ -2,12 +2,12 @@ const calcOrder = (cart) => {
   let subtotal = 0;
   let shipping = 0;
   let total = 0;
-  cart.forEach(item => {
+  cart.forEach((item) => {
     subtotal += item.price;
     shipping += 10;
   });
 
-  if(subtotal > 250) {
+  if (subtotal > 250) {
     shipping = 0;
   }
 
