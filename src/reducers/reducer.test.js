@@ -1,5 +1,5 @@
 import reducer from './index';
-import { addItem, removeItem } from '../actions';
+import { addItem, removeItem, clearCart } from '../actions';
 import gamesData from '../data/mock.json';
 
 const defaultState = {
@@ -55,5 +55,12 @@ describe('reducers', () => {
     const unDuplicatedCart = newState.cart.filter(item => item.id === newItem.id);
 
     expect(unDuplicatedCart.length).toBeLessThanOrEqual(1);
+  });
+
+  it('should clear cart', () => {
+    const action = clearCart();
+    const newState = reducer(defaultState, action);
+
+    expect(newState.cart).toHaveLength(0);
   });
 });

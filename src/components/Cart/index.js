@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { removeItem } from '../../actions';
+import { removeItem, clearCart } from '../../actions';
 import formatMoney from '../../lib/formatMoney';
 import calcOrder from '../../lib/calcOrder';
 import CartItem from '../CartItem';
@@ -9,7 +9,7 @@ import './style.css';
 
 const renderItemCounter = itemCount => itemCount === 1 ? '1 item' : `${itemCount} itens`;
 
-class Card extends Component {
+class Cart extends Component {
   constructor(props) {
     super(props);
 
@@ -20,6 +20,7 @@ class Card extends Component {
     };
 
     this.handleRemove = this.handleRemove.bind(this);
+    this.handleClear = this.handleClear.bind(this);
   }
 
   componentWillReceiveProps(nextProps) {
@@ -32,6 +33,13 @@ class Card extends Component {
     const { removeItem, cart } = this.props;
     const itemToRemove = cart.find(item => item.id === id);
     removeItem(itemToRemove);
+  }
+
+  handleClear() {
+    const response = window.confirm('Tem certeza que quer finalizar sua compra?');
+    if (response) {
+      this.props.clearCart();
+    }
   }
   render() {
     return (
@@ -67,6 +75,7 @@ class Card extends Component {
                 <p className="Cart-name">total</p>
                 <p className="Cart-value">{formatMoney(this.state.total)}</p>
               </div>
+              <button className="Cart-finish" onClick={this.handleClear}>finalizar compra</button>
             </div>
           }
         </div>
@@ -77,4 +86,4 @@ class Card extends Component {
 
 const mapStateToProps = state => ({ cart: state.cart });
 
-export default connect(mapStateToProps, { removeItem })(Card);
+export default connect(mapStateToProps, { removeItem, clearCart })(Cart);

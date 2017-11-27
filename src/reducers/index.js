@@ -16,6 +16,11 @@ const gameStoreReducer = (state = defaultState, action) => {
         ...state,
         cart: state.cart.filter(item => item.id !== action.item.id)
       };
+    case 'CLEAR_CART':
+      return {
+        ...state,
+        cart: [],
+      };
     default:
       return state;
   }
