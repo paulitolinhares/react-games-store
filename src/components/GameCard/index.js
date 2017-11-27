@@ -1,10 +1,12 @@
 import React from 'react';
+import { connect } from 'react-redux';
+import { addItem } from '../../actions';
 import formatMoney from '../../lib/formatMoney';
 import './style.css';
 
-const GameCard = ({id, name, price, score, image}) => {
+const GameCard = ({id, name, price, score, image, addItem}) => {
   return (
-    <div className="GameCard">
+    <div className="GameCard" onClick={() => addItem({id, name, price, score, image})}>
       <figure className="GameCard-figure">
         <img className="GameCard-image" src={`images/${image}`}/>
       </figure>
@@ -19,4 +21,4 @@ const GameCard = ({id, name, price, score, image}) => {
   );
 };
 
-export default GameCard;
+export default connect(null, { addItem })(GameCard);
