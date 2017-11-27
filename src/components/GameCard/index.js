@@ -1,4 +1,5 @@
 import React from 'react';
+import formatMoney from '../../lib/formatMoney';
 import './style.css';
 
 const GameCard = ({id, name, price, score, image}) => {
@@ -9,7 +10,7 @@ const GameCard = ({id, name, price, score, image}) => {
       </figure>
       <div className="GameCard-info">
         <p className="GameCard-title">{name}</p>
-        <p className="GameCard-price">{price}</p>
+        <p className="GameCard-price">{formatMoney(price)}</p>
       </div>
       <div className="GameCard-cta">
         <p>adicionar ao carrinho</p>
