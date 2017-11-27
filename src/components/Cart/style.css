@@ -1,3 +1,33 @@
 .Cart {
   width: 260px;
 }
+
+.Cart-itemCounter {
+  margin-left: 5px;
+  color: #8E8585;
+  font-size: 13px;
+  font-weight: 300;
+}
+
+.Cart-container {
+  border: 1px solid #E1E1E1;
+  border-radius: 3px;
+  padding: 25px;
+  min-height: 325px;
+}
+
+.Cart-title {
+  font-weight: 600;
+  margin-top: 0;
+  margin-bottom: 25px;
+}
+
+.Cart-empty {
+  text-align: center;
+  margin-top: 60px;
+}
+
+.Cart-empty p {
+  color: #756B6B;
+  font-size: 14px;
+}
