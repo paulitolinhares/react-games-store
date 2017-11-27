@@ -1,4 +1,4 @@
-.Main {
+.Main-nav {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
@@ -22,4 +22,13 @@
   background-image: url('../../images/arrow-down.svg');
   background-repeat: no-repeat;
   background-position: 240px 17px;
+  font-size: 12px;
+}
+
+.Main-cards {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  margin: 0 -15px;
+  padding-top: 55px;
 }

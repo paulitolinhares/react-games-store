@@ -1,0 +1,61 @@
+.GameCard {
+  text-align: center;
+  width: 260px;
+  cursor: pointer;
+  margin: 0 15px 40px;
+}
+
+.GameCard-figure {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  margin: 0;
+  width: 100%;
+  height: 230px;
+  background-color: #eee;
+}
+
+.GameCard-image {
+  margin: auto;
+  transition: all .2s ease-in-out;
+}
+
+.GameCard-info {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.GameCard-title {
+  color: #857C7C;
+}
+
+.GameCard-title , .GameCard-price{
+  margin: 0;
+}
+
+.GameCard-price, .GameCard-cta {
+  color: #3486E6;
+  font-weight: 600;
+}
+
+.GameCard-cta {
+  display: none;
+  height: 64px;
+  line-height: 64px;
+}
+
+.GameCard-cta p{
+  margin: 0;
+}
+
+.GameCard:hover .GameCard-cta{
+  display: block;
+}
+
+.GameCard:hover .GameCard-info{
+  display: none;
+}
+
+.GameCard:hover .GameCard-image{
+  transform: scale(1.1);
+}
