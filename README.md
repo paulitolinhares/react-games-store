@@ -1,18 +1,18 @@
-# Desafio Frontend
+# React Games Store
 
-Este desafio foi feito com base em https://gist.github.com/giulianovarriale/269f948dbf18573190ae59410be849b4
+This is a project made to practice ***React***, ***Redux***, ***Jest*** and a little bit of ***CSS Flexbox***
 
-## Instalação
+## Instalation
 
-- Clone esse repositório
-- Rode `npm install`
-- Rode `npm start` para o servidor de desenvolvimento ou `npm build` para montar o build de produção
+- Clone this repo
+- Run `npm install` to install dependencies
+- Run `npm start` to start a hot-reload development server or `npm build` to create the production-ready build
 
-## Requisitos
+## Features
 
-- [x] Os produtos devem ser renderizados dinâmicamente através de um mock json presente neste readme
-- [x] Os valores exibidos no checkout (frete, subtotal e total) devem ser calculados dinâmicamente
-- [x] O usuário poderá adicionar e remover produtos do carrinho
-- [x] O botão de adicionar ao carrinho será exibido no over do respectivo produto da listagem
-- [x] O botão de remover o item do carrinho será exibido no over de seu respectivo item no carrinho
-- [x] O usuário poderá filtrar os produtos por preço, popularidade (score) e ordem alfabética.
+- [x] The products must be rendered from the `mock.json` file (`src/data/mock.json`)
+- [x] The checkout values must be calculated dynamically
+- [x] The user can add and remove items from the cart
+- [x] The "add to cart" button will show up when the product is hovered
+- [x] The "remove from cart" button will show up when the its cart item is hovered
+- [x] The user can order the produts by price, popularity (score) and alphabetical order
