@@ -16,3 +16,7 @@ This is a project made to practice ***React***, ***Redux***, ***Jest*** and a li
 - [x] The "add to cart" button will show up when the product is hovered
 - [x] The "remove from cart" button will show up when the its cart item is hovered
 - [x] The user can order the produts by price, popularity (score) and alphabetical order
+
+## Demo
+
+You can see the demo clicking [here](https://react-games-store.herokuapp.com/)
